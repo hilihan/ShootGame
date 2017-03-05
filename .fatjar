@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Fri Mar 03 17:51:40 CST 2017
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=true
+jarname=C\:\\Users\\hilih\\Desktop\\ShootGame.jar
+manifest.mergeall=true
+manifest.mainclass=cn.mark.ShootGame
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=
+includes=
