@@ -38,4 +38,33 @@ public class Bee extends FlyingObject implements Award {
 		return awardType;
 	}
 
+	/**
+	 * 小蜜蜂走步
+	 */
+	@Override
+	public void step() {
+		x += xSpeed; //x+(向左/向右)
+		y += ySpeed;
+		//若窗口宽>小蜜蜂的宽，蜜蜂碰到窗口右边界，变xSpeed为负数
+		//小蜜蜂往左边走
+		if ( x > ShootGame.WIDTH - this.width ){
+			xSpeed = -1;
+		}
+		//蜜蜂碰到窗口左边界，变xSpeed为正数
+		//小蜜蜂往右边走
+		if ( x <= 0 ){
+			xSpeed = 1;
+		}
+	}
+	
+	/**
+	 * 越界检查
+	 */
+	@Override
+	public boolean outOfBounds() {
+		//小蜜蜂的y坐标大于等于窗口高就说明越界了
+		return this.y >= ShootGame.HEIGHT;
+		
+	}
+
 }

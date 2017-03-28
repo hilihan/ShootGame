@@ -21,5 +21,26 @@ public class Bullet extends FlyingObject {
 		this.x = x; 
 		this.y = y;
 	}
+
+	/**
+	 * 子弹走步
+	 */
+	@Override
+	public void step() {
+		//向上走步
+		y-=speed;
+		
+	}
+	
+
+	/**
+	 * 越界检查
+	 */
+	@Override
+	public boolean outOfBounds() {
+		//子弹的y小于等于子弹的高
+		return this.y <= -this.height;
+		
+	}
 	
 }

@@ -33,4 +33,23 @@ public class Airplane extends FlyingObject implements Enemy {
 		return 5;
 	}
 
+	/**
+	 * 敌机走步
+	 */
+	@Override
+	public void step() {
+		//向下走步
+		y+=speed;
+	}
+
+	/**
+	 * 越界检查
+	 */
+	@Override
+	public boolean outOfBounds() {
+		//敌机的y坐标大于等于窗口高就说明越界了
+		return this.y >= ShootGame.HEIGHT;
+		
+	}
+
 }
